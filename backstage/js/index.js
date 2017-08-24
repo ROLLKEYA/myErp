@@ -538,6 +538,9 @@
               
                 // 教室渲染
           Roomrender: function(data){
+            for(var i=0;i<data.length;i++){
+                data[i].updateDate=(new Date(data[i].updateDate).Format("yyyy-MM-dd hh:mm:ss "));  
+            }
             // 获取html的模板
             var htmlTpl = $('#tpl').html();
             // 生成html字符串，用于渲染
@@ -887,40 +890,37 @@
             $('#gt-recom1').on('click',function(){
                 
                        if(!$(this).hasClass('gt-BludClick')){
-                    $(this).children('span').addClass('gt-smallRun');
+                   
                     $(this).addClass('gt-BludClick');
-                   self.giveFans= $('#gt-extras2').val();
+                  
                    }else{
-                    $(this).children('span').removeClass('gt-smallRun');
+                   
                     $(this).removeClass('gt-BludClick');
-                   self.giveFans='';
+                  
                    }       
                   
           })
            $('#gt-recom2').on('click',function(){
                 
                        if(!$(this).hasClass('gt-BludClick')){
-                    $(this).children('span').addClass('gt-smallRun');
+                  
                     $(this).addClass('gt-BludClick');
-                       self.giveIntegral= $('#gt-extras3').val();
+                      
                    }else{
-                    $(this).children('span').removeClass('gt-smallRun');
-                    $(this).removeClass('gt-BludClick');
-                     self.giveIntegral='';
-               
-                          
+                   
+                    $(this).removeClass('gt-BludClick');       
                    }
           })
            $('#gt-recom3').on('click',function(){
                 
                        if(!$(this).hasClass('gt-BludClick')){
-                    $(this).children('span').addClass('gt-smallRun');
+                   
                     $(this).addClass('gt-BludClick');
-                      self.giveCash= $('#gt-extras4').val();
+                  
                    }else{
-                    $(this).children('span').removeClass('gt-smallRun');
+
                     $(this).removeClass('gt-BludClick');
-                  self.giveCash='';
+                 
                         
                 }
                 
@@ -938,8 +938,31 @@
 
                  $('#gt-buter').on('click',function(){
 
-                       
-                           self.aganin();
+                      if($('#gt-recom3').hasClass('gt-BludClick')){
+                        self.giveCash= $('#gt-extras4').val();
+                     }else{
+                        self.giveCash='';
+                     }
+                             
+                        
+                           if($('#gt-recom2').hasClass('gt-BludClick')){
+                            self.giveIntegral= $('#gt-extras3').val();
+                             }else{
+                                
+                                self.giveIntegral='';
+                                     
+                                }
+                        
+        
+                               if($('#gt-recom1').hasClass('gt-BludClick')){
+                                self.giveFans= $('#gt-extras2').val();
+                           } else{
+                         
+                            self.giveFans='';    
+                                                    }      
+        
+        
+                           
                        var reductionMoney=$('#gt-extras1').val();
                       
                          // console.log(JSON.stringify(self.obj))
@@ -1002,8 +1025,10 @@
                             $('#gt-extras2').val(giveFans);
                             $('#gt-extras3').val(giveIntegral);
                             $('#gt-extras4').val( giveCash);
-                             $('.gt-recomRun').children('span').removeClass('gt-smallRun');
+                       
                             $('.gt-recomRun').removeClass('gt-BludClick');
+                            
+
                         
                             
                  $.ajax({
@@ -1191,7 +1216,10 @@
                   // 推荐渲染
           Recorender: function(data){
             // 获取html的模板
-            
+            for(var i=0;i<data.length;i++){
+                data[i].updateDate=(new Date(data[i].updateDate).Format("yyyy-MM-dd hh:mm:ss "));  
+            }
+          
             var htmlTpl = $('#tplT').html();
             // 生成html字符串，用于渲染
             var htmlStr = _.template(htmlTpl)({list:data});
@@ -1243,41 +1271,7 @@
        
                },
 
-
-          
-            //  再次判断是否勾选
-            aganin:function(){
-                   if(!$('#gt-recom1').hasClass('gt-BludClick')){
-                
-                      self.giveCash= $('#gt-extras2').val();
-                   }else{
-                   
-                  self.giveCash='';
-                        
-                }
-                
-                   if(!$('#gt-recom2').hasClass('gt-BludClick')){
-                   
-                       self.giveIntegral= $('#gt-extras3').val();
-                   }else{
-                  
-                     self.giveIntegral='';}
-                
-
-                       if(!$('#gt-recom3').hasClass('gt-BludClick')){
-                   
-                   self.giveFans= $('#gt-extras4').val();
-                   }else{
-                   
-                   self.giveFans='';
-                   }       
-
-
-
-            },
-
-
-             
+   
         
             // 初始化选择
             NuberInit:function(){
@@ -1296,6 +1290,11 @@
         // 新增报名活动列表
           activeRend:function(data){
     
+            for(var i=0;i<data.subList.length;i++){
+                data.subList[i].startDate=(new Date(data.subList[i].startDate).Format("yyyy-MM-dd  "));  
+                 data.subList[i].endDate=(new Date(data.subList[i].endDate).Format("yyyy-MM-dd "));                     
+                     }
+
                   var self=this;
                 // 总页数
                self.contPg=data.pageCount;
@@ -1580,6 +1579,7 @@
             $('#gt-newaddRm').hide();
             $('.gt-year').hide();
             $('.gt-addClass').hide();
+            $('.gt-addSubjects').hide();
 
         })
           
@@ -1820,6 +1820,9 @@
             // 年级设计渲染
          ClassRender:function(data){
                 var self=this;
+                for(var i=0;i<data.subList.length;i++){
+                    data.subList[i].updateDate=(new Date(data.subList[i].updateDate).Format("yyyy-MM-dd hh:mm:ss "));  
+                }
                 // 总页数
                self.contPg=data.pageCount;
               // console.log('pg'+self.contPg)

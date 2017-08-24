@@ -1574,19 +1574,19 @@ console.log('招生管理');
 
                             /*    开班 日期遍历比较  */
 
-                            $('#gt-Qtable3 .gt-staDatelist').each(function(){
+                            $('#gt-Qtable3  .gt-endDatelist').each(function(){
                                      var stadate=$(this).text();
                                    var date= Date.parse(new Date(stadate));
                                    var loctDate=new Date().toLocaleDateString();
                                   
                                    if(date<(new Date(loctDate)).valueOf()){
                                     $(this).addClass('gt-enroPass');
-                                    $(this).next().find('ul').html("<li class='gt-Qlist'>详情</li>")
-                                    $(this).next().find('ul').height('40px');
+                                    $(this).next().next().find('ul').html("<li class='gt-Qlist'>详情</li>")
+                                    $(this).next().next().find('ul').height('40px');
                                         }else{
                                     $(this).removeClass('gt-enroPass'); 
-                                    $(this).next().find('ul').html("<li class='gt-Qlist'>详情</li> <li class='gt-Qlist2'>下架</li>");
-                                    $(this).next().find('ul').height('90px');
+                                    $(this).next().next().find('ul').html("<li class='gt-Qlist'>详情</li> <li class='gt-Qlist2'>下架</li>");
+                                    $(this).next().next().find('ul').height('90px');
                                    }
 
                             })
@@ -1594,7 +1594,7 @@ console.log('招生管理');
 
                             /*    报名结束 日期遍历比较  */
 
-                            $('#gt-Qtable3 .gt-endDatelist').each(function(){
+                            $('#gt-Qtable3 .gt-staDatelist').each(function(){
                                 var stadate=$(this).text();
                                 var loctDate=new Date().toLocaleDateString();
                               var date=  (new Date(stadate)).valueOf();
