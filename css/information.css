@@ -3,9 +3,15 @@
     padding:0px;
     margin: 0px;
     }
-    input,textarea{
-        text-indent:5px;
-    }
+
+    
+    div::-webkit-scrollbar { width:10px; height:10px;}           
+    div::-webkit-scrollbar-button {width: 10px;  height: 8px;border-radius: 4px; background-color: #c5c1c1;display: none;}     
+    div::-webkit-scrollbar-track {  background:#747272;}     
+    div::-webkit-scrollbar-track-piece  {  background:#f7f7f9;}
+    div::-webkit-scrollbar-thumb {background: #b3b3b7;;border-radius:4px;}      
+/* .gt-YwordList::-webkit-scrollbar-corner  { background:#82AFFF;}    
+.gt-YwordList::-webkit-resizer  {  background:#FF0BEE;}  */
 
    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
 color: #666; 
@@ -23,6 +29,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 color: #666; 
 
 } 
+textarea{
+    padding: 0px;
+    margin: 0px;
+}
    img {
     border: 0;
     vertical-align:middle;

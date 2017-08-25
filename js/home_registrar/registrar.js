@@ -53,6 +53,42 @@ console.log('招生管理');
      /* 第一次数据请求 */
                  
               frist_intni:function(){
+
+
+                function materiallayer(pidurl){
+                    layer.open({
+                           type: 2,
+                           title: '素材库',
+                           shadeClose: true,
+                           shade: 0.2,
+                           area: ['820px', '500px'],
+                           offset : "10px",
+                           content: "http://chendan.deeptel.com.cn:8124/common/material.do?retUrl="+pidurl+"&selectType=1",
+                        }); 
+               }
+               window.addEventListener("message", function( event ) { 
+                // 把父窗口发送过来的数据显示在子窗口中
+              alert("这个是fu 页面:" + event.data);
+              eval( event.data);
+        
+            }, false );
+            //单选的化，前面是id，后面是图片路劲，多选的，解析id，id包括图片id和图片url
+            function image(id,url){
+                layer.close();
+                   //处理方法
+            }
+            //素材库取消或返回
+            function go_back(){
+                layer.close();
+            }
+        
+           
+               $('#gt-QlistLiBox').on('click','.gt-chooseBut',function(){
+                console.log(4545);
+                materiallayer();
+               })
+           
+
                    var self=this;
                       $('.gt-NavReg').on('click',function(el){
                               $('#gt-AdminGT1').addClass('gt-clikClor');
@@ -220,6 +256,12 @@ console.log('招生管理');
                             $('.gt-QwaringL4').hide();
                             $('.gt-QwaringL5').hide();
                             $('input').removeClass('gt-warning');
+                            $('.gt-woringSelec').hide();
+
+                            $('#gt-Qbjecte').html(' \
+                            <option data-type="" value="">请选择收费方式</option>\
+                           <option data-type="0" value="">以节收费</option>\
+                          <option  data-type="1" value="">以小时收费</option>')
 
 
                              var html='\
@@ -237,7 +279,7 @@ console.log('招生管理');
                  <div class="gt-agnedL"><span>课程图片：</span></div>\
                  </div>  <div class="gt-bttonImg"> <img src="../image/ico/u8995.png" alt=""></div> \
                   <div class="gt-alignChoose">\
-                      <div class="gt-chooseBut"> 选择图片</div>\
+                      <div id="gt-gif" class="gt-chooseBut"> 选择图片</div>\
                       <p>提示：可添加多张图片，图片将在手机端课程详情页展示</p>\
                   </div></li>\
                </ul>';
@@ -408,7 +450,7 @@ console.log('招生管理');
                                        $('.gt-QwaringL3').show();
                                           return;
                                    } else{  
-                                       if((Number($('#gt-QlistIpt3').val())/60)!=1){
+                                       if((Number($('#gt-QlistIpt3').val())%60)!=0){
                                               
                                        $('#gt-QlistIpt3').addClass('gt-warning');
                                        $('.gt-QwaringL3').text('*请输入60的倍数');
@@ -2808,11 +2850,12 @@ console.log('招生管理');
                                          var startDate=$('#gt-QstarDate1').val();
                                          var  endDate=$('#gt-endDate').val();
                                          var classroomId=$('#gt-QlistSlec4 option:selected').data('classid');
+                                        
                                         var  start =  startDate .replace(new RegExp("-","gm"),"/");
                                         var  endDat =  endDate.replace(new RegExp("-","gm"),"/");
                                        start = (new Date( start)).getTime();
                                        endDat = (new Date( endDat)).getTime();
-
+                                            console.log( startDate );
                                         if(startDate===''||startDate===null||startDate===undefined){
                                             $('.gt-waring').text('*请输入开始上课时间');
                                             $('.gt-waring').show();

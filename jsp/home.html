@@ -6,7 +6,7 @@
    <link type="text/css" rel="stylesheet" href="../css/common/admin.css" />
    <link rel="stylesheet" type="text/css" href="../css/common/jquery-ui.css" /> 
     <link rel="stylesheet" type="text/css" href="../css/common/list.css" /> 
-
+   
        <link rel="stylesheet" href="../css/addedClass.css">  
         <link rel="stylesheet" href="../css/home.css">
   
@@ -236,7 +236,7 @@
                         </div>
  
                     <div class="gt-prSe">
-                        <span class="gt-prSearc"><input  id='gt-input1' type="text" placeholder="输入报名活动名称..."> <span class="gt-prSearcA" id='gt-searc1'> <img src="../image/ico/u544.png" alt=""></span>
+                        <span class="gt-prSearc gt-prSearcs"><input  id='gt-input1' type="text" placeholder="输入报名活动名称..."> <span class="gt-prSearcA" id='gt-searc1'> <img src="../image/ico/u544.png" alt=""></span>
                                 </span>  <span class="gt-prDate">开班日期：<input  style="border: 1px solid rgba(210, 210, 210, 1)" type="date" id='gt-dateInpu1' class="text-box" value="" placeholder="选择开班时间" title="选择开班时间" style="cursor:pointer;"/></span>
                     </div>
 
@@ -253,7 +253,7 @@
            </div>
           
                
-    <div class="gt-dataNext"><span class="gt-dataBlu gt-cliNext" id='gt-homePg1'>1</span><span class="gt-cliNext gt-notclick" id='gt-showPg1'>0</span><span class="gt-dataPre gt-cliNext"  id='gt-nextPg1'><img src="../image/ico/u565.png" alt=""></span></div>
+    <div id='gt-hideShow'class="gt-dataNext"><span class="gt-dataBlu gt-cliNext" id='gt-homePg1'>1</span><span class="gt-cliNext gt-notclick" id='gt-showPg1'>0</span><span class="gt-dataPre gt-cliNext"  id='gt-nextPg1'><img src="../image/ico/u565.png" alt=""></span></div>
 
              </div>
 
@@ -278,7 +278,7 @@
                         </div>
 
                      <div class="gt-prSe">
-           <span class="gt-prSearc"> 
+           <span class="gt-prSearc gt-prSearcs"> 
                <input type="text" id='gt-searcinput2' placeholder="输入订单号...">
                 <span class="gt-prSearcA" id='gt-searc2'> <img src="../image/ico/u544.png" alt=""></span>
              </span>  
@@ -335,7 +335,7 @@
                  <p>当前上课班次：<span id='gt-todayNber' class="gt-classDetilA">0</span> 当前上课人数:<span class="gt-classDetilA" >0</span> 缺席人数: <span class="gt-classDetilA">0</span> </p>
                     </div>
     <div class="gt-prSe ">
-           <span class="gt-prSearc gt-ctrol"> 
+           <span class="gt-prSearc gt-prSearcs gt-ctrol"> 
                <input type="text" id='gt-searcinput3' placeholder="输班级名称搜索...">
                 <span class="gt-prSearcA" id='gt-searc3'>  <img src="../image/ico/u544.png" alt=""></span>
              </span>  
@@ -392,7 +392,7 @@
 
 
           <div class="gt-prSe ">
-           <span class="gt-prSearc gt-teachCtrol"> 
+           <span class="gt-prSearc gt-prSearcs gt-teachCtrol"> 
                <input type="text" id='gt-input4' placeholder="班级名称">
                 <span class="gt-prSearcA" id='gt-searc4'> <img src="../image/ico/u544.png" alt=""></span>
              </span>  
@@ -428,6 +428,27 @@
             </div>
 
           </div>
+
+          <div class="gt-whenNodate" style="display:none">
+            <div class="gt-enrollList gt-whenList">
+               <div class="gt-nowTis">  <img src="../image/ico/poinCrl.png" alt=""></div> 
+               <div class="gt-newAlink"> <span>还没有报名活动，<a style="color: rgb(14, 207, 154)"  href="javascript:;"> 点击这里</a>创建报名活动吧</span></div> 
+              
+            </div>
+             
+          </div>
+
+          
+          <div class="gt-whNodate" style="display:none">
+            <div class="gt-enrollList gt-whenList">
+               <div class="gt-nowTis">  <img src="../image/ico/poinCrl.png" alt=""></div> 
+               <div class="gt-newAlink"> 没有相关数据</span></div> 
+              
+            </div>
+             
+          </div>
+
+
 
  </div>
 
@@ -2515,6 +2536,8 @@
 
     </div>
 
+
+
 <!--课程 删除弹窗-->
 <div id='gt-QYpote'class="gt-popup" style="display:none">
     <div class="gt-popupHerad ">
@@ -2524,6 +2547,7 @@
 <p class="gt-popupCentr">你确定删除该课程吗？</p>
 <div class="gt-butBox gt-popupuBut"> <span class="gt-butSave" id='gt-Qbutsuer'>确定</span>  <span class="gt-butNoSave">取消</span></div>
 </div>
+
 
 
  <!--教务管理   详情-->
@@ -2793,7 +2817,19 @@
 <!--操作下全局透明背景-->
 <div class="gt-AllClassAd" style="display:none" ></div>
  <!--班级管理  表下的 排课  新增排课-->
- 
+   <!--  是否结完业   -->
+
+<div class="gt-popup gt-delYorNt" style="display:none">
+    <div class="gt-popupHerad ">
+    <span class="gt-popupLf">提示</span>
+      <span class="gt-popupRt"><img src="../image/ico/u2527.png" alt=""></span>
+
+      <div class="gt-delting"> <img src="../image/ico/point.png" alt=""> </div>
+      <div class="gt-worldStyle"><span>有班级正在进行该课程,请全部结业后方可删除</span></div>
+      <div class="gt-yesbutns">确定</div>
+    </div>
+</div>
+
 
  <div id='gt-QnewAddClas' class="gt-NewClassAd" style="display:none">
     <div class="gt-popupHerad ">
@@ -3372,7 +3408,7 @@
 
 <ul class="gt-SyWUl">
     <li><span>学员信息 ：<span id='gt-GclassNo2'></span> <span  id='gt-GstudentName2'></span></span></li>
-    <li><span class="gt-SyWuliS">评语内容 ：</span><textarea name="" id="gt-ListCount" cols="5" rows="2"></textarea>
+    <li><span class="gt-SyWuliS">评语内容 ：</span><textarea maxlength="50" placeholder="不能超过50个字符" name="" id="gt-ListCount" cols="5" rows="2"></textarea>
         <span class="gt-pingYU2" >*请输入评语内容</span> 
     
     </li>
@@ -3403,7 +3439,7 @@
 
 <ul class="gt-SyWUl">
     <li><span>学员信息 ：<span id='gt-GclassNo'></span> <span id='gt-GstudentName'></span></span></li>
-    <li><span class="gt-SyWuliS">评语内容 ：</span><textarea name="" id="gt-GListCount" cols="5" rows="2"></textarea>
+    <li><span class="gt-SyWuliS">评语内容 ：</span><textarea maxlength="50" placeholder="不能超过50个字符" name="" id="gt-GListCount" cols="5" rows="2"></textarea>
     
      <span class="gt-pingYU" >*请输入评语内容</span> 
     </li>
@@ -4934,4 +4970,7 @@
 <script src="../js/home_intention/intention.js"> </script>
 <script src="../js/home_registrar/registrar.js"> </script>
 <script src="../js/home_teaching/home_teaching.js"> </script>
+<script src="../js/enronlName/feil.js"></script>
+<script src="../js/common/layer/layer.js"></script>
+
 </html>

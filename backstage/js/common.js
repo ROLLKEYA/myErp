@@ -1,6 +1,6 @@
 
-var url='http://localhost/education';
-
+// var url='http://localhost/education';
+var url='http://jiaoyu.yifriend.net/education';
       
     // 输入数字及一个小数点
             function clearNoNum(obj)

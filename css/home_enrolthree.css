@@ -23,7 +23,10 @@
 
         
     }
-
+    textarea{
+        padding: 0px;
+        margin: 0px;
+    }
         
             /*返回*/
             .gt-backDiv{

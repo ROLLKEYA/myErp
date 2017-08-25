@@ -940,29 +940,14 @@
 
                       if($('#gt-recom3').hasClass('gt-BludClick')){
                         self.giveCash= $('#gt-extras4').val();
-                     }else{
-                        self.giveCash='';
-                     }
-                             
-                        
-                           if($('#gt-recom2').hasClass('gt-BludClick')){
-                            self.giveIntegral= $('#gt-extras3').val();
-                             }else{
-                                
-                                self.giveIntegral='';
-                                     
-                                }
-                        
-        
-                               if($('#gt-recom1').hasClass('gt-BludClick')){
+                     }else{  self.giveCash=''; }
+                     if($('#gt-recom2').hasClass('gt-BludClick')){
+                         self.giveIntegral= $('#gt-extras3').val();
+                         }else{ self.giveIntegral='';  }
+                     if($('#gt-recom1').hasClass('gt-BludClick')){
                                 self.giveFans= $('#gt-extras2').val();
-                           } else{
-                         
-                            self.giveFans='';    
-                                                    }      
-        
-        
-                           
+                           } else{ self.giveFans='';}      
+                    
                        var reductionMoney=$('#gt-extras1').val();
                       
                          // console.log(JSON.stringify(self.obj))
@@ -1021,12 +1006,45 @@
                             var giveIntegral= $(this).parent().prev().find('.gt-giveIntegral').text();
                             var giveFans= $(this).parent().prev().find('.gt-giveFans').text();
                             var giveCash= $(this).parent().prev().find('.gt-giveCash').text();
+                             
+                            if(Number(reductionMoney)===0){
+                                $('#gt-extras1').val('');
+                               
+                            }else{
+                             
                             $('#gt-extras1').val(reductionMoney);
-                            $('#gt-extras2').val(giveFans);
-                            $('#gt-extras3').val(giveIntegral);
-                            $('#gt-extras4').val( giveCash);
+                            }
+                            
+                            if(Number(giveFans)===0){
+                                $('#gt-extras2').val('');
+                                $('#gt-recom1').removeClass('gt-BludClick');
+                            }else{
+                                $('#gt-recom1').addClass('gt-BludClick');  
+                                $('#gt-extras2').val(giveFans);
+                            }
+                            if(Number(giveIntegral)===0){
+                                $('#gt-extras3').val('');
+                                $('#gt-recom2').removeClass('gt-BludClick');
+                            }else{
+                                $('#gt-recom2').addClass('gt-BludClick');  
+                                $('#gt-extras3').val( giveIntegral);
+                            }
+                             
+
+                            if(Number(giveCash)===0){
+                                $('#gt-extras4').val('');
+                                $('#gt-recom3').removeClass('gt-BludClick');
+                            }else{
+                                $('#gt-recom3').addClass('gt-BludClick');  
+                                $('#gt-extras4').val(giveCash);
+                            }
+                             
+                          
+                          
+                           
+                            // $('#gt-extras4').val( giveCash);
                        
-                            $('.gt-recomRun').removeClass('gt-BludClick');
+                            // $('.gt-recomRun').removeClass('gt-BludClick');
                             
 
                         

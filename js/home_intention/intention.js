@@ -290,7 +290,7 @@ console.log('招生管理');
               e.stopPropagation(e); 
              })
          
-             $('.gt-butNoSave').on('click',function(){
+             $('.gt-butNoSave,.gt-popupRt').on('click',function(){
                   $('.gt-trans').hide();
                 $('.gt-suppReSdten').hide();
                 $('.gt-popup').hide();
@@ -616,7 +616,9 @@ console.log('招生管理');
                                         success: function(res){                                       
                                           console.log(res)
                                              if(res.code===100){
-                                                
+                                                if(res.data===''||res.data===undefined||res.data===null){
+                                                    res.data.className='可选择意向课程'
+                                                }
                                                  var htmlTpl = $('#Ytable3').html();
                                             // 生成html字符串，用于渲染
                                             var htmlStr = _.template(htmlTpl)({list:res.data});

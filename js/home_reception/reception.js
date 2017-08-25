@@ -122,10 +122,17 @@ console.log('前台业务JS!');
                                              if(res.code===100){
                                                self.Recorender(res.data);
                                                 self.titel();
+                                                $('.gt-whNodate').hide();
+                                               
+                                             }else{
+                                                $('.gt-whNodate').show();
+                                                $('.gt-whNodate').siblings().hide();
                                              }
                                         },
                                         error: function(){
                                             console.log('网络出错');
+                                            $('.gt-whNodate').show();
+                                            $('.gt-whNodate').siblings().hide();
                                         }
                                     });
 
@@ -308,10 +315,16 @@ console.log('前台业务JS!');
                                                   });
                                                       self.titel();
                                               
-                                             }else{}
+                                             }else{
+                                                $('.gt-whenNodate').show();
+                                                $('.gt-whenNodate').siblings().hide();
+                                             }
                                         },
                                         error: function(){
                                             console.log('网络出错');
+                                            $('.gt-whenNodate').show();
+                                            $('.gt-whenNodate').siblings().hide();
+
                                         }
                                     });
 
@@ -413,7 +426,7 @@ console.log('前台业务JS!');
                                         success: function(res){                                       
                                           console.log(res)
                                              if(res.code===100){
-                                                   
+                                                $('.gt-whNodate').hide();
                                                self.Sigrender(res.data);
                                                self.eachShow();
                                                
@@ -424,26 +437,16 @@ console.log('前台业务JS!');
 
 
                                              }else{
-                                                  $('#gt-table2').html( 
+                                                $('.gt-whNodate').show();
+                                                $('.gt-whNodate').siblings().hide();
                                                  
-                                          ' <tr class="gt-dataTr">\
-                                            <td class="gt-Edatli0"></td>\
-                                            <td class="gt-Edatli1">来源</td>\
-                                            <td class="gt-Edatli2">订单号</td>\
-                                            <td class="gt-Edatli3">姓名</td>\
-                                            <td  class="gt-Edatli4">联系电话</td>\
-                                            <td class="gt-Edatli5">班级</td>\
-                                            <td class="gt-Edatli6">课程名称</td>\
-                                            <td class="gt-Edatli7">是否付费</td>\
-                                            <td class="gt-Edatli8">定金</td>\
-                                            <td class="gt-Edatli9">操作</td>\
-                                                   </tr>'
-                                                  );
                                                 
                                              }
                                         },
                                         error: function(){
                                             console.log('网络出错');
+                                            $('.gt-whNodate').show();
+                                            $('.gt-whNodate').siblings().hide();
                                         }
                                     });
                                        })
@@ -772,21 +775,14 @@ console.log('前台业务JS!');
 
                                                
                                              } else{
-                                                  $('#gt-table3').html(
-                                            '<tr class="gt-dataTr">\
-                                            <td class="gt-Cdatli0">班级名称</td>\
-                                            <td class="gt-Cdatli1">课程名称</td>\
-                                            <td class="gt-Cdatli2">上课时间</td>\
-                                            <td class="gt-Cdatli3">上课老师</td>\
-                                            <td  class="gt-Cdatli4">上课教室</td>\
-                                            <td class="gt-Cdatli5">班级总人数</td>\
-                                            <td class="gt-Cdatli6">请假人数</td>\
-                                            <td class="gt-Cdatli7">旷课人数</td></tr>'
-                                                )
+                                                $('.gt-whNodate').show();
+                                                $('.gt-whNodate').siblings().hide();
                                              }
                                         },
                                         error: function(){
                                             console.log('网络出错');
+                                            $('.gt-whNodate').show();
+                                            $('.gt-whNodate').siblings().hide();
                                         }
                                     });
     
@@ -868,18 +864,6 @@ console.log('前台业务JS!');
                                                self.Dayder(res.data);
                                              
                                                   self.titel();
-                                             }else{
-                                                    $('#gt-table3').html(
-                                            '<tr class="gt-dataTr">\
-                                            <td class="gt-Cdatli0">班级名称</td>\
-                                            <td class="gt-Cdatli1">课程名称</td>\
-                                            <td class="gt-Cdatli2">上课时间</td>\
-                                            <td class="gt-Cdatli3">上课老师</td>\
-                                            <td  class="gt-Cdatli4">上课教室</td>\
-                                            <td class="gt-Cdatli5">班级总人数</td>\
-                                            <td class="gt-Cdatli6">请假人数</td>\
-                                            <td class="gt-Cdatli7">旷课人数</td></tr>'
-                                                )
                                              }
                                         },
                                         error: function(){
@@ -1155,24 +1139,19 @@ console.log('前台业务JS!');
                                         success: function(res){                                       
                                           console.log(res)
                                              if(res.code===100){
+                                                $('.gt-whNodate').hide();
                                                   self.Teachers_Dayder(res.data);
-                                                 
                                                   self.TeaEach();
                                                    self.titel();
                                              } else{
-                                                  $('#gt-table4').html('\
-                                                 <tr class="gt-dataTr">\
-                                            <td class="gt-Tdatli0">工号</td>\
-                                            <td class="gt-Tdatli1">姓名</td>\
-                                            <td class="gt-Tdatli2">部门</td>\
-                                            <td class="gt-Tdatli3">职位</td>\
-                                            <td  class="gt-Tdatli4">应上课</td>\
-                                            <td class="gt-Tdatli5">出勤情况</td>\
-                                                <td class="gt-Tdatli7">操作</td> </tr>')
+                                                $('.gt-whNodate').show();
+                                                $('.gt-whNodate').siblings().hide();
                                              }
                                         },
                                         error: function(){
                                             console.log('网络出错');
+                                            $('.gt-whNodate').show();
+                                            $('.gt-whNodate').siblings().hide();
                                         }
                                     });
                         }

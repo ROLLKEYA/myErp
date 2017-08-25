@@ -13,6 +13,29 @@ console.log(54255);
            },
        
            returned:function(){
+
+            
+            function materiallayer(){
+              layer.open({
+                     type: 2,
+                     title: '素材库',
+                     shadeClose: true,
+                     shade: 0.2,
+                     area: ['820px', '500px'],
+                     offset : "10px",
+                     content: 'http://suc.deeptel.com.cn/common/material.do',
+                  }); 
+         }
+     window.addEventListener("message", function( event ) { 
+             // 把父窗口发送过来的数据显示在子窗口中
+           alert("这个是子页面:" + event.data)
+         }, false );
+         
+     
+         $('.gt-stepDb').on('click',function(){
+          console.log(4545);
+          materiallayer();
+         })
              var self=this;
         
                          $('#gt-deAdmincenter', parent.document).click(function(){

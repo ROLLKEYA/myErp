@@ -3,9 +3,12 @@
         padding:0px;
         margin: 0px;
         }
-        input,textarea{
-            text-indent:5px;
+        textarea{
+            padding: 0px;
+            margin: 0px;
         }
+            
+      
 
         input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
     color: #666; 

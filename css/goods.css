@@ -12,7 +12,10 @@
         margin: 0;
         }
            
-
+        textarea{
+            padding: 0px;
+            margin: 0px;
+        }
 
 
             .gt-bgd{
