@@ -287,8 +287,8 @@
                      <select name="" id="gt-selec2" class="gt-selecAa">
                         <option data-order='' value="">选择付费状态</option>
                         <option data-order='0' value="">未付款</option>
-                        <option  data-order='1' value="">已付款</option>
-                        <option  data-order='2' value="">欠费</option>
+                        <option  data-order='1' value="">欠费</option>
+                        <option  data-order='2' value="">已付款</option>
                         </select>
                       
                   </span> 
@@ -2685,7 +2685,7 @@
                                     
                                 </span> 
                                 </div>
-                <div class=" gt-classRoom"> <span class="gt-prClor">*</span> 班级人数 ：</div> <div class="gt-classNum "><input class="gt-classNum-input" value='' id='gt-QlistintVal2' type="text" placeholder=""></div>
+                <div class=" gt-classRoom"> <span class="gt-prClor">*</span> 班级人数 ：</div> <div class="gt-classNum "><input onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" class="gt-classNum-input" value='' id='gt-QlistintVal2' type="text" placeholder=""></div>
                 <div  class="gt-woringList3">*请选择教师</div>   <div  class="gt-woringList4">*请输入班级人</div> 
                 </li>
 
@@ -2955,7 +2955,7 @@
 </div>
   
   <div class="gt-prSe gt-whter">
-                        <span class="gt-prSearc gt-Qlookf"><input type="text" placeholder="输入关键词搜索..."> <span class="gt-prSearcA"> <img src="../image/ico/u544.png" alt=""></span>
+                        <span class="gt-prSearc gt-Qlookf"><input id='gt-noeaddSrp' type="text" placeholder="输入关键词搜索..."> <span id='gt-noeaddSrp2' class="gt-prSearcA"> <img src="../image/ico/u544.png" alt=""></span>
                                 </span>  
                     </div>
   <div class="gt-Sdlist"> 

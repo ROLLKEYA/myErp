@@ -3296,12 +3296,79 @@ console.log('招生管理');
 
                      }
 
+
+                     
+                                 //   搜索 回车 搜索
+                 $('#gt-noeaddSrp').keydown(function(event){
+                    
+                          if ( event.keyCode==13) {
+                            
+                               var val=$(this).val();
+                               console.log(val)
+                           
+                               $.ajax({
+                                url:url+'/selectTeamStudentList.do',
+                                  data:{
+                                enrollId:self.enrollid,
+                                studentName:val,                           
+                                  },
+                                  type:'post',
+                                  dataType:'json',
+                                  success: function(res){                                       
+                                    console.log(res)
+                                       if(res.code===100){
+                                     
+                                        gt_addStudens(res.data);
+                                       }
+                                  },
+                                  error: function(){
+                                      console.log('网络出错');
+                                  }
+                              });
+
+            
+                       };             
+             })
+
+                    //    报名活动查询
+
+                     $('#gt-noeaddSrp2').on('click',function(){
+                            var val=$('#gt-noeaddSrp').val();
+                            console.log(val);
+                           
+                              $.ajax({
+                                url:url+'/selectTeamStudentList.do',
+                                  data:{
+                                enrollId:self.enrollid,
+                                studentName:val,                       
+                                  },
+                                  type:'post',
+                                  dataType:'json',
+                                  success: function(res){                                       
+                                    console.log(res)
+                                       if(res.code===100){
+                                     
+                                        gt_addStudens(res.data);
+                                       }
+                                  },
+                                  error: function(){
+                                      console.log('网络出错');
+                                  }
+                              });
+
+                     })                
+
+
+
+
                                                       // 首页
               $('#gt-LihomePg1').on('click',function(){
+                var val=$('#gt-noeaddSrp').val();
                                $.ajax({
                                       url:url+'/selectTeamStudentList.do',
                                         data:{
                                       enrollId:self.enrollid,
+                                      studentName:val,
                                      curPage:1, //当前页                                     
                                         },
                                         type:'post',
@@ -3323,12 +3390,14 @@ console.log('招生管理');
                             //   翻页 下一页
                           
                             $('#gt-LinexyPg1').on('click',function(){
-                                console.log( self.currentPg)
+                                console.log( self.currentPg);
+                                var val=$('#gt-noeaddSrp').val();
                                $.ajax({
                                 url:url+'/selectTeamStudentList.do',
                                         data:{
                                       enrollId:self.enrollid,
-                                      curPage: self.currentPg+1, //当前页                                     
+                                      curPage: self.currentPg+1, //当前页      
+                                      studentName:val,                           
                                         },
                                         type:'post',
                                         dataType:'json',
