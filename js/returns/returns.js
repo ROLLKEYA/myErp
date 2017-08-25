@@ -80,7 +80,13 @@ console.log('通知');
                       
                               if ( event.keyCode == 13) {
                                    var val=$('#gt-input1').val();
-                                  
+                                   if(val===''||val===undefined||val===null){
+                                    $('.gt-plaseEnte').show();
+
+                                }else{
+                                    $('.gt-plaseEnte').hide();
+                                }
+
                                  $.ajax({
                                        url:url+'/selectStudent.do',
                                         data:{
@@ -114,7 +120,13 @@ console.log('通知');
                          $('#gt-searc1').on('click',function(){
                                 var val=$('#gt-input1').val();
                                 console.log(val);
-                                 
+                                  
+                                if(val===''||val===undefined||val===null){
+                                    $('.gt-plaseEnte').show();
+
+                                }else{
+                                    $('.gt-plaseEnte').hide();
+                                }
 
 
                                  $.ajax({
