@@ -11,7 +11,7 @@ console.log('通知');
                 
                 this.typeNBer='';
                 
-           },
+           }, 
    
            notice_bind:function(){
              var self=this;
