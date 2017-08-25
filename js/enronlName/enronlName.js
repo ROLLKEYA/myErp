@@ -147,7 +147,7 @@ console.log(54255);
                                              $('#gt-sbjOrclass').html("<div id='gt-capySbj' class='gt-Qcaysbjs'>\
                                              <span  class='gt-selecA'>\
                                              <select name='' id='gt-Bsbujs' class='gt-selecAa gt-BselecList'> <option value=''   >请选择科目</option>"+ html+"</select>\
-                                   </span>\<input  onkeyup='(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)'  class='gt-textInput' type='text' > \
+                                   </span>\<input  onkeyup='(this.v=function(){this.value=this.value.replace(/[^0-9]+/,'');}).call(this)'  class='gt-textInput' type='text' > \
                                    <span>分</span>  <div  class='gt-delfater'><span>点击删除</span> </div>  </div>\
                                    <div  class='gt-Qcaysbjs' id='gt-BoxsubList'></div>\ ");
                                                   
@@ -161,7 +161,7 @@ console.log(54255);
                                                          html+= "<option class='gt-list' data-id="+self.subjecId[i] +" value=''>"+self.subjectNames[i] +"</option>" }   
                                                          self.htmlBox=" <div class='gt-Qcaysbj'>\ <span  class='gt-selecA'>\
                                                  <select name=''  class='gt-selecAa gt-BselecList'><option value=''  > 请选择科目</option> "+html+"</select> </span>\
-                                                 <input  onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this) \
+                                                 <input  onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9]+/,'');}).call(this) \
                                                  onblur=this.v(); class='gt-textInput' type='text' > <span>分</span>  <div  class='gt-delfater'><span>点击删除</span></div>  </div>"
                                                
                                                     $('#gt-BoxsubList').append(self.htmlBox);

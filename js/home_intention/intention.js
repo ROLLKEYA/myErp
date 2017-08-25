@@ -372,7 +372,7 @@ console.log('招生管理');
             $('#gt-KKaddpraent').on('click',function(){
                 var htm='<div class="gt-Parents"><span>家长姓名 :</span> <input class="gt-parnName gt-AddLIst1" type="text"> <span class="gt-margLf">关系 :  </span><span class="gt-margRt"></span>\
  <input   class="gt-parnName gt-AddLIst2" type="text">\
- <span class="gt-ParentsMar gt-margLf" >联系电话 : </span> <input onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,"");}).call(this); class="gt-parnPhote gt-AddLIst3" type="text"> \
+ <span class="gt-ParentsMar gt-margLf" >联系电话 : </span> <input onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9]+/,"");}).call(this); class="gt-parnPhote gt-AddLIst3" type="text"> \
               </div>';
               $('#gt-prantr').append(htm);
 

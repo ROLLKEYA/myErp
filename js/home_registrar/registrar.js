@@ -269,7 +269,7 @@ console.log('招生管理');
                   <li> <div class="gt-alignedBox"> \
                  <div class="gt-agnedL"><span class="gt-alignColor">* </span><span>级别：</span></div>\
                  </div> <input class="gt-alBoxIpu gt-QBOxiput1" value="" type="text" placeholder="无">\
-                 <span class="gt-alignColor gt-aligLf">* </span><span>单价：</span><input  onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,"");}).call(this)" class="gt-alBoxIpu gt-QBOxiput2 "  type="text" placeholder="">\
+                 <span class="gt-alignColor gt-aligLf">* </span><span>单价：</span><input  onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9]+/,"");}).call(this) class="gt-alBoxIpu gt-QBOxiput2 "  type="text" placeholder="">\
                   <div class="gt-QwaringL4">*请输入课程级别</div> <div class="gt-QwaringL5">*请输入课程单价</div>\
             </li>\
             <li class="gt-bttonBoxLi"> <div class="gt-alignedBox"> \
@@ -369,7 +369,7 @@ console.log('招生管理');
                   <li> <div class="gt-alignedBox"> \
                  <div class="gt-agnedL"><span class="gt-alignColor">* </span><span>级别：</span></div>\
                  </div> <input class="gt-alBoxIpu gt-QBOxiput1" value="" type="text" placeholder="无">\
-                 <span class="gt-alignColor gt-aligLf">* </span><span>单价：</span><input onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,"");}).call(this)" class="gt-alBoxIpu gt-QBOxiput2 "  type="text" placeholder="">\
+                 <span class="gt-alignColor gt-aligLf">* </span><span>单价：</span><input onkeyup=(this.v=function(){this.value=this.value.replace(/[^0-9]+/,"");}).call(this) class="gt-alBoxIpu gt-QBOxiput2 "  type="text" placeholder="">\
                   <div class="gt-QwaringL4">*请输入课程级别</div> <div class="gt-QwaringL5">*请输入课程单价</div>  \
             </li>\
             <li class="gt-bttonBoxLi"> <div class="gt-alignedBox"> \
