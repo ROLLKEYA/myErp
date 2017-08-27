@@ -20,6 +20,8 @@ function payfor(dataNb){
                 data:{
                  orderNo:orderNo,                   
           
+
+                 
                 },
                        type:'post',
                     dataType:'json',
