@@ -49,6 +49,7 @@ console.log('前台业务JS!');
                      $('.gt-deails').show();
                      $('#gt-Caddclass').hide();
                      $('iframe').hide();
+                     $('.gt-enroll').hide();
                     $('#gt-lista').addClass('gt-hoverClor');
                     $('#gt-lista').siblings().removeClass('gt-hoverClor');
                     $('.gt-provided').show();

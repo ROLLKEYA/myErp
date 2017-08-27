@@ -1,4 +1,6 @@
 console.log(54255);
+var fundio='sfefjiefji'
+console.log(fundio);
 function payfor(dataNb){
     console.log(dataNb);
        var orderNo=dataNb;
@@ -13,7 +15,8 @@ function payfor(dataNb){
                                 $('#gt-NavStage', parent.document).removeClass('gt-navBlock');
     
                         });
-                        
+                        fundio='88888'
+                        console.log(fundio);
        $('#gt-butonNext').attr('data-id',orderNo)
                  $.ajax({
           url:url+'/selectOrderByOrderNo.do',
@@ -32,8 +35,8 @@ function payfor(dataNb){
                       /*  consumption 为空则没有会员信息*/
                       if(res.data.consumption===undefined||res.data.consumption===''||res.data.consumption===null)
                         {
-                           $('#gt-Qmeber').hide();
-                            $('.gt-consumption').hide();
+                        //    $('#gt-Qmeber').hide();
+                        //     $('.gt-consumption').hide();
                         }
 
                       $('#gt-Qtotal').text(res.data.allMoney);
@@ -74,6 +77,7 @@ function payfor(dataNb){
 
 //继续报名
 $('#gt-continu').on('click',function(){
+    
     
                                     $.ajax({
                                            url:url+'/findGradeAllList.do',
@@ -186,6 +190,7 @@ $('#gt-continu').on('click',function(){
 
                  
              $('#gt-butonNext').on('click',function(){
+                console.log(fundio);
                    $('.gt-paymentWay .gt-paymentDiv').each(function(){
                   if($(this).hasClass('gt-cashBack')){
                   self.paymentType=$(this).data('type');

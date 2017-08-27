@@ -63,7 +63,7 @@ table {
     font-weight: 400;
     font-style: normal;
     color: #353535;
-        margin-left: 5%;
+        margin-left: 2%;
     }
     .gt-backSp{
     float: right;
@@ -79,6 +79,7 @@ table {
     text-align: center;
     line-height: 30px;
     cursor: pointer;
+    margin-right: 8%;
     }
   .gt-backBlu{
       color: #0DC292;
