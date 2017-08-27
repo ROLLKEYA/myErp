@@ -629,6 +629,13 @@ form{position:relative;}
     left: 399px;
      display: none;
 }
+.gt-waringPhote2{
+    color: red;
+    position: absolute;
+    top: 34px;
+    left: 399px;
+     display: none;
+}
 .gt-delfater{
     width: 65px;
     height: 28px;

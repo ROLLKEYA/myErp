@@ -1,10 +1,9 @@
 console.log(54255);
-
 function payfor(dataNb){
     console.log(dataNb);
        var orderNo=dataNb;
-       $('#gt-Qcodepay').val(' ');
-       $('.gt-backCur,.gt-backSp,#gt-Nobug').on('click',function(){
+               $('#gt-Qcodepay').val(' ');
+                    $('.gt-backCur,.gt-backSp,#gt-Nobug').on('click',function(){
                                $('iframe', parent.document).hide();
                                $('#gt-deail', parent.document).show();
                                 $('.gt-NavSupply ', parent.document).removeClass('gt-navBlock');
@@ -14,74 +13,7 @@ function payfor(dataNb){
                                 $('#gt-NavStage', parent.document).removeClass('gt-navBlock');
     
                         });
-                            $('#gt-continu').on('click',function(){
-
-                                $.ajax({
-                                       url:url+'/findGradeAllList.do',
-                                        data:{
-                                     
-                                                                    
-                                        }, 
-                                        type:'post',
-                                        dataType:'json',
-                                        success: function(res){                                       
-                                          console.log(res)
-                                             if(res.code===100){
-                                             
-                                            
-                                             var html=''
-                                           for(var i=0;i<res.data.length;i++){
-                                  html+=" <option value='' data-id="+ res.data[i].id+" >"+ res.data[i].gradeName +"</option> "      
-                                
-                                        }
-
-                                top.frames['gt-homeOne'].document.getElementById('gt-Bselect').innerHTML= html;
-                                                  allSbj();                        
-                                             }
-                                        },
-                                        error: function(){
-                                            console.log('网络出错');
-                                        }
-                                    });
-
-
-                              $('iframe', parent.document).hide();
-                               $('#gt-deail', parent.document).hide();
-                               $('.gt-trans',parent.document).hide();
-                                 $('#gt-homeOne', parent.document).show();
-                               
-                            })
-
-                            
-                  /*    所有科目 */
-                  var allSbj=function(){
-                         $.ajax({
-                                       url:url+'/findSubjectAllList.do',
-                                        data:{
-                                     
-                                                                    
-                                        },
-                                        type:'post',
-                                        dataType:'json',
-                                        success: function(res){                                       
-                                          console.log(res)
-                                             if(res.code===100){
-                                             
-                                             var html=''
-                                           for(var i=0;i<res.data.length;i++){
-                                   html+=" <option value=''  data-id="+ res.data[i].id+" >"+ res.data[i].subjectName +"</option> "      
-                                              
-                                        }
-                                top.frames['gt-homeOne'].document.getElementById('gt-Bsbujs').innerHTML= html;
-                               
-
-                                             }
-                                        },
-                                        error: function(){
-                                            console.log('网络出错');
-                                        }
-                                    });
-                  }
+                        
        $('#gt-butonNext').attr('data-id',orderNo)
                  $.ajax({
           url:url+'/selectOrderByOrderNo.do',
@@ -101,11 +33,14 @@ function payfor(dataNb){
                            $('#gt-Qmeber').hide();
                             $('.gt-consumption').hide();
                         }
+
                       $('#gt-Qtotal').text(res.data.allMoney);
                       $('#gt-haspay').text();
                       var neddpay= Number($('#gt-Qtotal').text())- Number($('#gt-haspay').text());
                       $('#gt-QneedPay').text(neddpay);
-                      $('#gt-butonNext').attr('data-signid',res.data.signId)
+                      $('#gt-butonNext').attr('data-signid',res.data.id);
+                      $('#gt-butonNext').attr('data-recommedlist',res.data.recommendList);
+                    
                                                 
                       }
                         },
@@ -133,7 +68,79 @@ function payfor(dataNb){
            });
        },
            returned:function(){
-             var self=this;
+            var self=this;
+
+//继续报名
+$('#gt-continu').on('click',function(){
+    
+                                    $.ajax({
+                                           url:url+'/findGradeAllList.do',
+                                            data:{
+                                         
+                                                                        
+                                            }, 
+                                            type:'post',
+                                            dataType:'json',
+                                            success: function(res){                                       
+                                              console.log(res)
+                                                 if(res.code===100){
+                                                 
+                                                
+                                                 var html=''
+                                               for(var i=0;i<res.data.length;i++){
+                                      html+=" <option value='' data-id="+ res.data[i].id+" >"+ res.data[i].gradeName +"</option> "      
+                                    
+                                            }
+    
+                                    top.frames['gt-homeOne'].document.getElementById('gt-Bselect').innerHTML= html;
+                                                      allSbj();                        
+                                                 }
+                                            },
+                                            error: function(){
+                                                console.log('网络出错');
+                                            }
+                                        });
+    
+    
+                                  $('iframe', parent.document).hide();
+                                   $('#gt-deail', parent.document).hide();
+                                   $('.gt-trans',parent.document).hide();
+                                     $('#gt-homeOne', parent.document).show();
+                                   
+                                })
+    
+                                
+                      /*    所有科目 */
+                      var allSbj=function(){
+                             $.ajax({
+                                           url:url+'/findSubjectAllList.do',
+                                            data:{
+                                         
+                                                                        
+                                            },
+                                            type:'post',
+                                            dataType:'json',
+                                            success: function(res){                                       
+                                              console.log(res)
+                                                 if(res.code===100){
+                                                 
+                                                 var html=''
+                                               for(var i=0;i<res.data.length;i++){
+                                       html+=" <option value=''  data-id="+ res.data[i].id+" >"+ res.data[i].subjectName +"</option> "      
+                                                  
+                                            }
+                                    top.frames['gt-homeOne'].document.getElementById('gt-Bsbujs').innerHTML= html;
+                                   
+    
+                                                 }
+                                            },
+                                            error: function(){
+                                                console.log('网络出错');
+                                            }
+                                        });
+                      }
+
+           
               /*   选择积分，优惠 */
                 $('.gt-orders').on('click','.gt-cube',function(){
 
@@ -182,16 +189,33 @@ function payfor(dataNb){
                   self.paymentType=$(this).data('type');
                   }
               }) 
+
+
+                        //    Enrolled
+              
+                        //     buyMoney
+              
+                        //     fans
+              
+                        //      integral
+              
+                        //      money
+              
+                        //        orderNo
+              
+                        //       recommendCode
+
                  var orderNo=$(this).data('id');
                 var  actualMoney= $('#gt-Qcodepay').val();
                 var   allMoney=$('#gt-QneedPay').text();
-                // var  signId=$(this).data('signid')
-              
+                 var  signId=$(this).data('signid');
+                 var rcomlist=$(this).data('recommedlist');
+                 console.log(rcomlist);
                  console.log(orderNo);
                  console.log(self.paymentType);
                  console.log( actualMoney);
                       console.log(allMoney);
-                    //   console.log(signId)
+                      console.log(signId)
                         $.ajax({
           url:url+'/payOrder.do',
                 data:{     
@@ -204,9 +228,11 @@ function payfor(dataNb){
                     incomeType:'0',
                     discount:'',
                     integral:'0',
-                    // signId: signId,
+                     signId: signId,
                     actualMoney:actualMoney,
                     allMoney: allMoney,
+                  
+
 
           
                 },

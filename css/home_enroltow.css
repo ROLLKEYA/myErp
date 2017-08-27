@@ -51,7 +51,7 @@ table {
             position: absolute;
             left: 0px;
             top: 0px;
-            width: 1280px;
+            width: 101%;
             height:1450px;
             background-image: url('../image/ico/u2518.png');
            background-size: 100% 100%;
@@ -320,11 +320,21 @@ width: 80px;
     font-weight: 400;
     font-style: normal;
     margin: 20px 0 0 30px;
+    position: relative;
 
 }
+
+
 .gt-totalColro{
 
     color: #FD7768;
+}
+.gt-woringty{
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    color: red;
+    display: none;
 }
 
 .gt-nextAndback{

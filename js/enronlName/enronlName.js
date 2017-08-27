@@ -231,11 +231,12 @@ console.log(54255);
                 /*   保存信息 */
 
 
-                    $(' .gt-deails input').on('focus',function(){
+                    $(' .gt-deails input,#gt-Bselect').on('focus',function(){
                                           $('#gt-IFinput1').parent().removeClass('gt-warning');
                                        $('.gt-waringName').hide();
                                        $('#gt-IFinput3').parent().removeClass('gt-warning');
-                                        $('.gt-waringPhote').hide();
+                                        $('.gt-waringPhote,.gt-waringPhote2').hide();
+                                        $('#gt-Bselect').parent().removeClass('gt-warning');$('.gt-waringName').hide();
 
 
                             })
@@ -269,8 +270,18 @@ console.log(54255);
                                                                         return ; 
                                                                         } else{  $('#gt-IFinput3').parent().removeClass('gt-warning');$('.gt-waringPhote').hide();}
                               
-                                                 
+                                                    /*        名字 不能为空  */
+                                   if(gradeId===''||gradeId===undefined||gradeId===null){
+                                    
+                                         $('#gt-Bselect').parent().addClass('gt-warning');
+                                         $('.gt-waringPhote2').show();
+                                            return;
+                                     } else{  $('#gt-Bselect').parent().removeClass('gt-warning');$('.gt-waringName').hide();
+                                     $('.gt-waringPhote2').hide();
+                                    }  
                                    
+
+
 
                                       
                                                     /*  学科添加传的参数 */

@@ -93,7 +93,7 @@
          <div  data-type='3' class="gt-paymentDiv "> <span class="gt-cashC"><img src="../image/ico/u12942.png" alt=""></span><span class="gt-cashSpan">扫码支付</span></div>
      
      </div>
-     <div class="gt-payTotal"><span>请输入收取金额 ： </span> <input id='gt-Qcodepay' class="gt-payTotalIput" type="text">  <span class="gt-change">找零钱 : </span><span class="gt-changeClor">￥<span id='gt-backpay'>0</span></span></div>
+     <div class="gt-payTotal"><span>请输入收取金额 ： </span> <input id='gt-Qcodepay' onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9 .]+/,'');}).call(this)"  class="gt-payTotalIput" type="text">  <span class="gt-change">找零钱 : </span><span class="gt-changeClor">￥<span id='gt-backpay'>0</span></span></div>
 <div class="gt-butonCom gt-nextBut " id="gt-butonNext"><span>支付</span></div> <div  id='gt-Nobug'class="gt-butonCom gt-cancelBut "><span>返回</span></div>
 </div>
 

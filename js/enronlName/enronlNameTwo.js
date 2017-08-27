@@ -64,7 +64,7 @@ function binddata(dataNb){
                     
                     
                         $('.gt-deails').on('click','.gt-traineeChoose',function(){
-
+                                    $('.gt-woringty').hide();
                                  self.activtId=[];
 
                             $('#gt-aa').html("<span  id='gt-tRig'class='gt-entRig'>确定</span>")
@@ -370,7 +370,7 @@ function binddata(dataNb){
 
                  $('#gt-butonNext').on('click',function(){
                     self.orderList=[];
-
+                    self.bitlist=false
                      $('#gt-Ptable1 .gt-enrotabl .gt-QlistParent').each(function(){
                             var  orderListObj={};
                             var studentId=$(this).parent().parent().data('id');
@@ -378,6 +378,14 @@ function binddata(dataNb){
                             var  enrollName=$(this).find('.gt-Qlist2').text();
                             var   enrollId=$(this).find('.gt-Qlist2').data('enrollid');
                             var  price=$(this).find('.gt-Qlist').text();
+
+
+                            if( enrollId===''|| enrollId===undefined|| enrollId===null){
+                                self.bitlist=false;
+                            }else{
+                                self.bitlist=true;
+                           
+                            }
                              orderListObj.studentId=studentId;
                              orderListObj.studentNo=studentNo;
                              orderListObj.enrollName=enrollName;
@@ -389,6 +397,14 @@ function binddata(dataNb){
                              self.orderList.push(orderListObj);
 
                      })
+
+                     if( self.bitlist===false){
+                        $('.gt-woringty').show();
+                       return;
+                     }else{
+                        $('.gt-woringty').hide();
+                     }
+
                       var   orderList=self.orderList;             
                                   orderList=JSON.stringify( orderList);
                                   console.log(orderList)
