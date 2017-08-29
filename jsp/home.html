@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/common/conmon" /> 
    <link type="text/css" rel="stylesheet" href="../css/common/admin.css" />
    <link rel="stylesheet" type="text/css" href="../css/common/jquery-ui.css" /> 
     <link rel="stylesheet" type="text/css" href="../css/common/list.css" /> 
@@ -2834,7 +2835,7 @@
     <span class="gt-popupLf">新增排课</span>
       <span class="gt-popRt"><img src="../image/ico/u2527.png" alt=""></span>
 </div>
-  <ul class="gt-ClassFixUl gt-allAddUl">
+  <ul class="gt-ClassFixUl gt-allAddUls gt-allAddUl">
 
    <li>
    <div class="gt-AddBox "> <span class="gt-prClor">*</span> 开始时间 ：</div> <div class="gt-allSelect">
@@ -2842,14 +2843,14 @@
    </div>
 
    </li>
-    <li>
+    <!-- <li>
    <div class="gt-AddBox"> <span class="gt-prClor">*</span> 结束时间 ：</div> <div class="gt-allSelect">
          <input name="act_start_time" type="text" id='gt-endDate' class="text-box" value="" placeholder="选择下课时间" title="选择下课时间" readonly="readonly" style="cursor:pointer;"/>
    </div>
 
-   </li>
+   </li> -->
 <li>
-   <div class="gt-AddBox"> 上班教室 ：</div> <div class="gt-allSelect"> <span  class="gt-fiexselecA gt-allfiexSl">             
+   <div class="gt-AddBox"><span class="gt-prClor">*</span> 上课教室 ：</div> <div class="gt-allSelect"> <span  class="gt-fiexselecA gt-allfiexSl">             
                      <select name="" id="gt-QlistSlec4" class="gt-fiexselec">
                        
                      </select>
@@ -2921,16 +2922,16 @@
 </div>
 
  <!--班级管理 成功加入班级-->
-<div  class="gt-popup gt-feidiao" style="display:block">
+<div  class="gt-popup gt-feidiao" style="display:none">
     <div class="gt-popupHerad ">
     <span class="gt-popupLf">提示</span>
-      <span class="gt-popupRt"><img src="../image/ico/u2527.png" alt=""></span>
+      <span class="gt-popupRt2"><img src="../image/ico/u2527.png" alt=""></span>
 </div>
    
 <div class="gt-liailo"> <img src="../image/ico/u14422.png" alt=""></div>
 
 <p class="">成功进入班级</p>
-<div class="gt-butBox gt-popupuBut"> <span  class="gt-butSave">确定</span> </div>
+<div class="gt-butBox  gt-buttns"> <span  class="gt-butSave">确定</span> </div>
 </div>
 
 
@@ -3037,7 +3038,7 @@
     <span class="gt-popupLf">新增考试</span>
       <span class="gt-popupRt"><img src="../image/ico/u2527.png" alt=""></span>
 </div>
-  <ul class="gt-ClassFixUl gt-allAddUl">
+  <ul class="gt-ClassFixUl  gt-allAddUl">
 
    <li>
    <div class="gt-AddBox "> <span class="gt-prClor">*</span> 考试名称 ：</div> <div class="gt-allSelect"><input id='gt-GaddClassEm' class="gt-newExamIput" type="text"></div>

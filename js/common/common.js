@@ -1,5 +1,5 @@
 
- //var url='http://localhost/education';
+// var url='http://localhost/education';
 var url='http://jiaoyu.yifriend.net/education';
    // 输入数字及一个小数点
             function clearNoNum(obj)
@@ -60,3 +60,18 @@ var url='http://jiaoyu.yifriend.net/education';
         //     obj.value = ''+obj.value;
         //     }
         //     }
+           /*  金额小数点两位方法   */
+        // function returnFloat(value){
+        //     var value=Math.round(parseFloat(value)*100)/100;
+        //     var xsd=value.toString().split(".");
+        //     if(xsd.length==1){
+        //     value=value.toString()+".00";
+        //     return value;
+        //     }
+        //     if(xsd.length>1){
+        //     if(xsd[1].length<2){
+        //     value=value.toString()+"0";
+        //     }
+        //     return value;
+        //     }
+            

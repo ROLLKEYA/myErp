@@ -228,12 +228,7 @@ console.log('home loaded!');
               
             })
 
-            $('#gt-returns').on('click',function(){
-                  $('#gt-ret').show();
-                 $('#gt-ret').siblings().hide();
-                $('.gt-deails').hide();
-            
-            })
+           
 
             $('#gt-query').on('click',function(){
                  $('#gt-que').show();

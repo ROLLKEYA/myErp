@@ -461,6 +461,13 @@ console.log('通知');
 
                    })
 
+                  $('#gt-acceBut').on('click',function(){
+
+                    $('.gt-returnslist').show();
+                  })
+
+
+
                     //  确定发送
                     $('#gt-butSaveSms').on('click',function(){
                        

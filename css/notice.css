@@ -661,6 +661,21 @@ margin-top: 14px;
         .gt-butSave:hover{
             background-image: url('../image/ico/u2529_mouseOver.png');
         }
+
+        .gt-choosetem{
+            width: 80px;
+        }
+        .gt-netSame{
+            width: 500px;
+            height: 38px;
+           
+            /* margin: 0 auto; */
+            margin-left: 109px;
+            box-sizing: border-box;
+        }
+        .gt-bortsing{
+            border: 1px solid rgb(201, 201, 201);
+        }
         .gt-butNoSave{
         width: 60px;
             height: 32px;
@@ -707,7 +722,486 @@ margin-top: 14px;
             opacity:0.3;/*其他，透明度50%*/
             z-index:87;
         }
+
+        .gt-setbox{
+            position: absolute;
+            left: 192px;
+            top: 247px;
+            z-index: 99;
+            background-color: white;
+            width: 900px;
+            height:640px;
+            font-family: 'Microsoft YaHei UI';
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+    }  
+
+    .gt-NewaddSetup{
+        font-family: 'Microsoft YaHei UI';
+      font-weight: 400;
+      font-size: 14px;
+      color: #333333;
+  }
+  .gt-setherad{
+      width:100%;
+      height: 42px;
+       line-height: 42px;
+       background-color: rgba(248, 248, 248, 1);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(238, 238, 238, 1);
+  }
+  .gt-setheradWord{
+      height: 42px;
+     
+      float:left;
+     padding-left: 5px;
+  }
+  .gt-setheradImg{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      float: right;
+      margin-right: 40px;
+      cursor: pointer;
+  }
+  .gt-setheradImg img{
+  width: 100%;
+  height: 100%;
+  }
+  .gt-setInput{
+      margin-left: 30px;
+  }
+  .gt-setInput input{
+      font-family: 'Arial Normal', 'Arial';
+      font-weight: 400;
+      font-style: normal;
+      font-size: 13px;
+      color: #333333;
+      text-align: center;
+          width: 70px;
+      height: 30px;
+      background: inherit;
+      background-color: rgba(255, 255, 255, 0);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(210, 210, 210, 1);
+      border-radius: 2px;
+  }
+  .gt-recommend{
+      position: relative;
+         height: 160px;
+  }
+  .gt-setUp{
+    
+      height:150px;
+  }
+  
+  
+  .gt-setopp ul {
+      margin-left: 60px;
+  }
+  .gt-setopp ul li {
+      margin-top: 20px;
+  
+  }
+  .gt-setopDs{
+     
+    float: left;
+  }
+  .gt-setopList{
+  
+  float: left;
+  }
+  .gt-etopDateLi{
+      margin-top: 0px;
+      width: 499px;
+  }
+  .gt-setli0{
+      width: 130px;
+  }
+  .gt-setli1{
+      width: 40px;
+  }
+  .gt-recomA{
+      position: absolute;
+      top:-5px;
+      left: 115px;
+      /* display: inline-block； */
+     
+  }
+  
+  .gt-recomRun{
+      display: inline-block;
+      position: absolute;
+      top:4px;
+      left: 0px;
+      width: 20px;
+      height: 20px;  
+    background-image: url('../image//ico/u777.png')
+  }
+  .gt-recomB{
+       position: absolute;
+    top:33px;
+      left: 115px;
+  }
+  .gt-recomC{
+   position: absolute;
+     top:70px;
+      left: 115px;
+  }
+  .gt-smallRun{
+      display: inline-block;
+      position: absolute;
+      top:5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background-image: url('../image//ico/u770.png');
+      background-size: 10px 10px;
+  }
+  .gt-recommend div .gt-BludClick{
+       background-image: url('../image//ico/u768.png');
+  }
+  
+  .gt-recomRun:hover{
+       background-image: url('../image//ico/u777_mouseOver.png');
+  }
+  .gt-setBut{
+     position: relative;
+     width: 300px;
+     height: 40px;
+  }
+  .gt-setButSpan{
+      display: inline-block;
+      width: 30px;
+      height: 30px; 
+      background-image: url('../image//ico/u758.png');
+      background-size: 30px 30px;
+      position: absolute;
+      top:-2px;
+  }
+  .gt-setLf{
+      margin-left: 30px;
+  }
+  .gt-smallSetbut{
+      width: 14px;
+      height: 14px;
+      top:4px;
+      left: 7px;
+    background-image: url('../image//ico/u760.png');
+      background-size: 14px 14px;
+      position: absolute;
+  }
+  .gt-saveBut{
       
+      text-align: left;
+  }
+  .gt-preserved{
+      display: inline-block;
+          width: 60px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      background: inherit;
+      background-color: rgba(1, 170, 237, 1);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(1, 170, 237, 1);
+      border-radius: 2px;
+          box-shadow: none;
+      font-family: 'Microsoft YaHei UI';
+      font-weight: 400;
+      font-style: normal;
+      font-size: 12px;
+      color: #FFFFFF;
+     margin-right: 50px;
+     cursor: pointer;
+  }
+  .gt-preserved:hover{
+      background-color: rgba(1, 185, 254, 1);
+      border-color: rgba(1, 185, 254, 1);
+  }
+  .gt-getaway{
+      display:inline-block;
+      width: 60px;
+      height: 30px;
+       text-align: center;
+      line-height: 30px;
+      background: inherit;
+      background-color: rgba(255, 255, 255, 1);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(201, 201, 201, 1);
+      border-radius: 2px;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-family: 'Microsoft YaHei UI';
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      color: #353535;
+      cursor: pointer;
+  }
+  .gt-getaway:hover{
+  
+    border-color: rgba(1, 170, 237, 1);
+  }
+  .gt-delImg{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+ .gt-delImg img{
+ width: 24px;
+    height: 24px;
+ }
+
+
+.gt-tableBox{
+    width: 100%;
+    height: 445px;
+    margin-top: 20px;
+}
+.gt-tableLf{
+    float:left;
+    width: 400px;
+  
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+}
+.gt-tableRt{
+    margin-right: 40px;
+    float: right;
+    width: 198px;
+    height: 99%;
+    background-color: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+}
+
+ /*表格*/
+    .gt-steList{
+      
+    width: 100%;
+    line-height: 39px;
+    box-sizing: border-box;
+   /*border: 1px solid #e4e4e4;*/
+   
+}
+.gt-steLitabl{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: none; 
+    outline: none;
+    font-weight: 400;
+    font-style: normal;
+        color: #333333;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+}
+
+.gt-steLitabl td{
+    
+   height: 40px;
+   border-right: 1px solid #e4e4e4;
+   /*border-bottom: 1px solid white;*/
+ box-sizing: border-box;
+}
+/*奇数行*/
+.gt-steLitabl tbody tr:nth-child(odd) td { background-color: #f2f2f2; }
+/*偶数行*/
+.gt-steLitabl tbody tr:nth-child(even) td { background-color: #ffffff; }
+
+/*报名活动列表*/
+ .gt-steLi1{
+width: 50px;
+position: relative;
+}
+
+.gt-steLi2{
+
+
+}
+ gt-steLi3{
+width: 80px;
+}
+.gt-steLi4{
+width: 80px;
+}
+.gt-steLi5{
+width: 80px;
+}
+.gt-steLitabl .gt-steLi6{
+width: 100px;
+border-right: none;
+}
+
+.gt-steLitabl  tbody tr:hover td { background-color: #f0f0f1; }
+
+.gt-setButbg{
+     width: 20px;
+    height: 20px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(210, 210, 210, 1);
+    border-radius: 2px;
+    position:absolute;
+    text-align: center;
+    display: inline-block;
+    top:10px;
+    left: 15px;
+  
+}
+.gt-setButBlbg{
+   
+   background-color: #01aaed;
+   border-color: #01aaed;
+  
+}
+.gt-SetbutCall{
+    width: 14px;
+    height: 14px;
+    top:3px;
+    left: 4px;
+  background-image: url('../img/ico/u760.png');
+    background-size: 14px 14px;
+    position: absolute;
+}
+.gt-setButbg:hover{
+    border-color: #01aaed;
+}
+
+.gt-tabHerad{
+        width: 198px;
+    height: 40px;
+    background: inherit;
+    background-color: rgba(242, 242, 242, 1);
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    line-height: 40px;
+  
+   
+}
+.gt-ClorTp{
+        color: #FD7768;
+}
+.gt-Mglft{
+    margin-left: 20px;
+}
+.gt-delImg{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+ .gt-delImg img{
+ width: 24px;
+    height: 24px;
+ }
+ .gt-lihBox{
+       width: 198px;
+    height: 40px;
+    background: inherit;
+   display: inline-block;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    line-height: 40px;
+     line-height: 40px;
+ }
+ .gt-chekSend{
+color: #0DC292;
+}
+.gt-chekNext{
+    width: 50px;
+text-align: center;
+margin-top: 20px;
+width: 216px;
+height: 60px;
+margin: 0 auto;
+margin-top: 20px;
+
+
+}
+.gt-chekNext span {
+display: inline-block;
+width: 40px;
+height: 30px;
+line-height: 30px;
+ border: 1px solid #e4e4e4;
+font-family: 'Microsoft YaHei UI Regular', 'Microsoft YaHei UI';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+
+}
+.gt-chekbg:hover{
+
+    background: #f0f0f1;
+    cursor: pointer; 
+}
+.gt-chekNext .gt-chekBlu{
+    color: white;
+     background-color: rgba(1, 170, 237, 1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(13, 194, 146, 1);
+}
+.gt-clickDate span{
+    cursor: pointer;
+}
+.gt-roomdSpan{
+cursor: pointer;
+}
+.gt-entRig{
+  display: inline-block;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e4e4e4;
+    font-family: 'Microsoft YaHei UI Regular', 'Microsoft YaHei UI';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    background-color:rgba(1, 170, 237, 1);
+    color: white;
+    cursor: pointer;
+}
+
+  
   @media screen and (min-width: 1280px){
      .gt-trans{
            left: -2px;

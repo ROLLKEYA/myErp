@@ -155,15 +155,77 @@
 </div>
 
 <div class="gt-relate">
-    <div class="gt-relateGt gt-SmsLf"> <span>接受班级: </span> </div><textarea   name="" id="gt-noticeContent3" cols="30" rows="10"> </textarea>
+    <div class="gt-relateGt gt-SmsLf"> <span>接受班级: </span> <span id='gt-acceBut'  class="gt-butSave gt-choosetem">选择班级</span>  </div>
 </div>
+<div class="gt-netSame gt-bortsing"> </div>
 
 <div class="gt-butBox gt-relateMrg"> <span id='gt-butSaveSms' class="gt-butSave">保存</span>  <span class="gt-butNoSave">取消</span></div>
 
 </div>
 
+  <!--推荐优惠设置-->
+  <div class="gt-setbox" style="display:block"> 
+    
+    <div class="gt-setherad"> <span class="gt-setheradWord"></span>选择发送班级<span class="gt-setheradImg"><img src="../image/ico/u725.png" alt=""></span></div>
+    
+         <!-- <span class="gt-prSearc "><input id='gt-searcIput' type="text" placeholder="输入关键词搜索..."> <span class="gt-prSearcA" id='gt-searc'> <img src="../image/ico/u544.png" alt=""></span></span>  -->
 
- 
+         <div class="gt-tableBox">  
+         <div class="gt-tableLf">
+
+           <div class="gt-steList"> 
+        
+    
+
+            <table  class="gt-steLitabl" >
+                  <tbody id='gt-newAddset'> 
+                   
+                    <tr>
+                        <td class="gt-steLi1"></td>
+                        <td class="gt-steLi2">报名活动名称</td>
+                       
+                       
+                  </tr>
+                  <tr >
+                    <td class="gt-steLi1">   <span class="gt-setButbg "> <span class=""></span></span> </td>
+                    <td class="gt-steLi2">英语四班</td>
+                   
+                   
+              </tr>
+          
+                  </tbody>
+                                      
+
+          </table>
+      </div>
+
+         </div>
+         
+         <div class="gt-tableRt" id="gt-hasChoose">
+             <div class="gt-tabHerad"> <span class="gt-Mglft">已选择 ：</span><span class="gt-ClorTp" id='gt-Nuber'>0</span> <span class="gt-delImg"><img src="../image/ico/u1157.png" alt=""></span></div>
+     
+            
+                <table  class="gt-bas" >
+                 <tbody id='gt-nsdw'>
+                
+
+
+                 </tbody>
+                  
+                
+              </table>
+
+         </div>
+
+
+         </div>
+
+              <div class="gt-chekNext ">
+       <span class="gt-chekBlu gt-chekbg" id='gt-hPag'>1</span><span class="gt-chekbg" style="cursor:text;" id='NewPg'>2</span><span class="gt-chekPre gt-chekbg" id='nextPg'><img src="../image/ico/u252.png" alt=""></span> <span  id='gt-tRig'class="gt-entRig">确定</span>
+       
+  </div>
+     
+      </div>
 
 
                   
@@ -180,7 +242,7 @@
                           <td  class="gt-Edatli4">操作</td>
                            
                     </tr>
-              <% for(var i=0,len=list.length; i<len; i++) { %>
+                 <% for(var i=0,len=list.length; i<len; i++) { %>
                         <tr>
                           <td class="gt-Edatli0 "> <%=list[i].noticeTitle%> </td>
                           <td class="gt-Edatli1"><%=list[i].updateDate%></td>
@@ -216,6 +278,8 @@
 
                       
                       </script>
+
+                     
 
 
 <div class="gt-trans" style="display:none"></div>

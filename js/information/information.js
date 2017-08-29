@@ -1188,6 +1188,7 @@ console.log(54255);
                       self.stdentCade=$(this).parent().data('studentno');
                      $('.gt-classNameAnd').html( "<span>"+self.stdentCade +"-"+  self.stdentName+"</span> </span> ");
                     self.studentId=$(this).parent().data('id');
+                    
                     $('#gt-trans', parent.document).show();
                     $('.gt-trans').show();
                     $('#gt-stopClass').show();

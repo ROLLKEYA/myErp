@@ -403,6 +403,7 @@ console.log('招生管理');
                                         $('#gt-QlistIpt3').removeClass('gt-warning');
                                        $('.gt-QwaringL3').hide();
                                        $('.gt-chosetype').hide();
+                                       $('.gt-woringSelec').hide();
 
                             })
                             $('#gt-Qbjecte,#gt-QselctList').on('click',function(){
@@ -2855,13 +2856,13 @@ console.log('招生管理');
                                     $('#gt-QbutSave').on('click',function(){
                                         
                                          var startDate=$('#gt-QstarDate1').val();
-                                         var  endDate=$('#gt-endDate').val();
+                                       //  var  endDate=$('#gt-endDate').val();
                                          var classroomId=$('#gt-QlistSlec4 option:selected').data('classid');
                                         
                                         var  start =  startDate .replace(new RegExp("-","gm"),"/");
-                                        var  endDat =  endDate.replace(new RegExp("-","gm"),"/");
+                                       // var  endDat =  endDate.replace(new RegExp("-","gm"),"/");
                                        start = (new Date( start)).getTime();
-                                       endDat = (new Date( endDat)).getTime();
+                                       var endDate = (new Date( start+2700000)).getTime();
                                             console.log( startDate );
                                         if(startDate===''||startDate===null||startDate===undefined){
                                             $('.gt-waring').text('*请输入开始上课时间');
@@ -2880,7 +2881,7 @@ console.log('招生管理');
                                              
                                         }
                                           
-                                         if( start>=endDat){
+                                         if( start>=endDate){
                                              $('.gt-waring').text('*请输入正确的时间段');
                                             $('.gt-waring').show();
                                           return;
@@ -2888,6 +2889,8 @@ console.log('招生管理');
                                             $('.gt-waring').hide();
                                               
                                          }
+                                         endDate= (new Date(endDate).Format("yyyy-MM-dd hh:mm:ss"));
+                                         console.log(endDate)
                                          if(classroomId===''||classroomId===null||classroomId===undefined){
                                             $('.gt-waring').text('*请选择排课班级');
                                             $('.gt-waring').show();
@@ -2896,7 +2899,7 @@ console.log('招生管理');
                                             $('.gt-waring').hide();
                                               
                                          }
-         
+                                       
                                          $.ajax({
                                             url:url+'/addRowClass.do',
                                              data:{
@@ -2928,7 +2931,7 @@ console.log('招生管理');
 
 
                                         console.log( start);
-                                        console.log( endDat);
+                                      
                                         
                                    
                                     })

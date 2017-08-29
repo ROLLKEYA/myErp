@@ -3,8 +3,18 @@ console.log('通知');
 
  function retunlis(studentNo){
       
-  
-                                  
+    var htmlBox='   <tr class="gt-dataTr">\
+    <td class="gt-Numli1">课程名称</td>\
+    <td class="gt-Numli2">价格(元)</td>\
+    <td class="gt-Numli3">课程数量</td>\
+    <td class="gt-Numli4"> 单位</td>\
+    <td class="gt-Numli5">剩余数量</td>\
+    <td class="gt-Numli6">可退金额(元)</td>\
+      <td class="gt-Numli8">操作</td>\
+  </tr>';
+              $('#gt-retunmamy,#gt-QhasMeny').text('0');
+              $('#gt-Qtable3').html( "<tbody>"+ htmlBox+" </tbody>")
+               $('#gt-rquesLat').val('') ;                
                                  $.ajax({
                                        url:url+'/selectStudent.do',
                                         data:{
@@ -27,7 +37,11 @@ console.log('通知');
                                                 var htmlStr = _.template(htmlTpl)({list:res.data});
                                             
                                                 $('#gt-table1').html(htmlStr);
-                                                                                
+                                                $('#gt-deailsbox').show();
+                                              
+                                                $('#gt-deailsbox2').hide();
+                                                
+
                                                  
                                              }
                                         },
@@ -58,6 +72,17 @@ console.log('通知');
    
            returns_bind:function(){
              var self=this;
+
+
+             $('#gt-returns', parent.document).on('click',function(){
+                $('#gt-ret', parent.document).show();
+               $('#gt-ret', parent.document).siblings().hide();
+              $('.gt-deails', parent.document).hide();
+                $('#gt-deailsbox2').show();
+              
+                $('#gt-deailsbox').hide();
+          
+          })
             //  返回home页面
              $('.gt-backCur,#gt-butNote,.gt-backSp').on('click',function(){
                    
@@ -99,9 +124,11 @@ console.log('通知');
                                           console.log(res)
                                              if(res.code===100){
                                                    self.returns_rend(res.data);
-                                                
+                                                   
                                                   self.titel();
+                                                  $('#gt-deailsbox').show();
                                                   $('.gt-plaseEnte').hide();
+                                                  $('#gt-deailsbox2').hide();
                                              }else{
                                                 $('.gt-plaseEnte').show();
                                              }
@@ -143,6 +170,8 @@ console.log('通知');
                                                  self.returns_rend(res.data);
                                               
                                                     self.titel();
+                                                    $('#gt-deailsbox').show();
+                                                    $('#gt-deailsbox2').hide();
                                              }
                                         },
                                         error: function(){
@@ -332,14 +361,14 @@ console.log('通知');
                             var refundCount=$(this).data('refundcount');
                             var refundPrice=$(this).data('refundprice');
 
-                            if(classPinId){
+                            if(classPinId===''||classPinId===undefined||classPinId===null){
                                self.bitData=false;
                             }else{
                                 self.bitData=true;
                             }
-                            objc.classPinId=classPinId;
-                            objc.refundCount=refundCount;
-                            objc.refundPrice=refundPrice;
+                             objc.classPinId=classPinId;
+                             objc.refundCount=refundCount;
+                             objc.refundPrice=refundPrice;
                              self.refundDetails.push(objc);
                             
                        })
