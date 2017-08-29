@@ -91,12 +91,19 @@ console.log('招生管理');
 
                    var self=this;
                       $('.gt-NavReg').on('click',function(el){
-                              $('#gt-AdminGT1').addClass('gt-clikClor');
-                               $('#gt-AdminGT1').siblings().removeClass('gt-clikClor')
-                         $('#gt-ClAdin1').show();
-                        $('#gt-ClAdin1').siblings().hide();
-                         $('.gt-centCom').hide();
-                        $('.gt-educational').show();
+
+                        $('.gt-nav').removeClass('gt-navBlock');
+                        $('#gt-NavRegSm').addClass('gt-navBlock');
+                        $('.gt-buttonEven').removeClass('gt-buttonClik ');
+                        $('#gt-NavReg').addClass('gt-buttonClik ');
+                        $('iframe').hide();
+
+                            $('#gt-AdminGT1').addClass('gt-clikClor');
+                             $('#gt-AdminGT1').siblings().removeClass('gt-clikClor')
+                             $('#gt-ClAdin1').show();
+                             $('#gt-ClAdin1').siblings().hide();
+                             $('.gt-centCom').hide();
+                             $('.gt-educational').show();
                              $.ajax({
                                      url:url+'/ findClassSonList.do',
                                         data:{

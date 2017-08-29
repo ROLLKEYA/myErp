@@ -43,25 +43,16 @@
       
       <div class="gt-Elist" id='gt-Qmeber'>
       
-      <table  class="gt-enrotabl">
-                        <tr class="gt-dataTr">
-                                <td class="gt-Edatli0"> 会员卡</td>
-                                <td class="gt-Edatli1">姓名</td>
-                                <td class="gt-Edatli2">联系电话</td>
-                                <td class="gt-Edatli3">会员等级</td>
-                                <td  class="gt-Edatli4">积分</td>
-                                 <td class="gt-Edatli5">粉币</td>
-                                 <td class="gt-Edatli6">余额</td>
-                          </tr>
-                       <tr class="gt-dataTr">
-                                <td class="gt-Edatli0"> 11450256</td>
-                                <td class="gt-Edatli1">小多</td>
-                                <td class="gt-Edatli2">18826244125</td>
-                                <td class="gt-Edatli3">多粉会员</td>
-                                <td  class="gt-Edatli4">200</td>
-                                 <td class="gt-Edatli5">100</td>
-                                 <td class="gt-Edatli6 gt-delte">500</td>
-                          </tr>   
+      <table id='gt-listCodes' class="gt-enrotabl">
+            <tr class="gt-dataTr">
+                  <td class="gt-Edatli0">报名活动名称</td>
+                  <td class="gt-Edatli1">报名活动金额(元)</td>
+                  <td class="gt-Edatli2">赠送现金(元)</td>
+                  <td class="gt-Edatli3">赠送粉币</td>
+                  <td  class="gt-Edatli4">赠送积分</td>
+                  <td  class="gt-Edatli5">减免金额(元)</td>
+                  </tr>
+                      
                           
                           </table>
       </div>
@@ -73,25 +64,8 @@
 
 <div class="gt-Elist" id='gt-Qmeber'>
 
-<table  class="gt-enrotabl">
-                  <tr class="gt-dataTr">
-                          <td class="gt-Edatli0"> 会员卡</td>
-                          <td class="gt-Edatli1">姓名</td>
-                          <td class="gt-Edatli2">联系电话</td>
-                          <td class="gt-Edatli3">会员等级</td>
-                          <td  class="gt-Edatli4">积分</td>
-                           <td class="gt-Edatli5">粉币</td>
-                           <td class="gt-Edatli6">余额</td>
-                    </tr>
-                 <tr class="gt-dataTr">
-                          <td class="gt-Edatli0"> 11450256</td>
-                          <td class="gt-Edatli1">小多</td>
-                          <td class="gt-Edatli2">18826244125</td>
-                          <td class="gt-Edatli3">多粉会员</td>
-                          <td  class="gt-Edatli4">200</td>
-                           <td class="gt-Edatli5">100</td>
-                           <td class="gt-Edatli6 gt-delte">500</td>
-                    </tr>   
+<table id='gt-QmeberTble'   class="gt-enrotabl">
+            
                     
                     </table>
 </div>
@@ -124,7 +98,7 @@
      
      </div>
      <div class="gt-payTotal"><span>请输入收取金额 ： </span> <input id='gt-Qcodepay' onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9 .]+/,'');}).call(this)"  class="gt-payTotalIput" type="text">  <span class="gt-change">找零钱 : </span><span class="gt-changeClor">￥<span id='gt-backpay'>0</span></span></div>
-<div class="gt-butonCom gt-nextBut " id="gt-butonNext"><span>支付</span></div> <div  id='gt-Nobug'class="gt-butonCom gt-cancelBut "><span>返回</span></div>
+<div id='gt-wwxfli'><div class="gt-butonCom gt-nextBut " id="gt-butonNext"><span>支付</span></div>  <div  id='gt-Nobug'class="gt-butonCom gt-cancelBut "><span>返回</span></div></div>
 </div>
 
  </div>
@@ -146,6 +120,24 @@
 </div>
 <div class="gt-butonCom gt-nextBut gt-successBut  " id='gt-continu'><span>继续报名</span></div> <div id='gt-back' class="gt-butonCom gt-cancelBut gt-successBack"><span>返回</span></div>
 </div>
+
+
+<div class="gt-loser">
+      
+      <div class="gt-brief"> <span class="gt-briefLeft">提示</span> <span id='' class="gt-briefRight"><img src="../image/ico/u2527.png" alt=""></span></div>
+      
+      <div class="gt-successImg"><p> <img src="../image/ico/point.png" alt=""></p> </div>
+      <div class="gt-redWord"><p>粗存卡余额不足，请充值再支付</p></div>
+      <div class="gt-membersCard">
+            <!-- <p>会员卡好：<span> 184154511515</span></p> -->
+      </div>
+      <div class="gt-studyCard">
+            <!-- <p>学号：<span> 小多(<span>00015</span>)</span> , <span>小粉</span><span>(00015)</span></p> -->
+      </div>
+      <div class="gt-butonCom gt-nextBut gt-successBut  " id=''><span>确定</span></div> </div>
+      </div>
+
+
 <div class="gt-trans" style="display:none"></div>
 <script src="../js/common/jquery-1.8.3.js"></script>
 <script src="../js/enronlName/enrolNameTree.js"></script>

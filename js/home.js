@@ -16,15 +16,53 @@ console.log('home loaded!');
         // 事件绑定
         // 首页 导航
         navEvent:function(){
+
+                        /*  头像  */
+
+
+                function materiallayer(pidurl){
+                    layer.open({
+                           type: 2,
+                           title: '素材库',
+                           shadeClose: true,
+                           shade: 0.2,
+                           area: ['820px', '500px'],
+                           offset : "10px",
+                           content: "http://chendan.deeptel.com.cn:8124/common/material.do?retUrl="+pidurl+"&selectType=1",
+                        }); 
+               }
+               window.addEventListener("message", function( event ) { 
+                // 把父窗口发送过来的数据显示在子窗口中
+              alert("这个是fu 页面:" + event.data);
+              eval( event.data);
+        
+            }, false );
+            //单选的化，前面是id，后面是图片路劲，多选的，解析id，id包括图片id和图片url
+            function image(id,url){
+                layer.close();
+                   //处理方法
+            }
+            //素材库取消或返回
+            function go_back(){
+                layer.close();
+            }
+        
+           
+               $('.gt-navBox').on('click','#gt-editImg',function(){
+                console.log(4545);
+                materiallayer();
+               })
+
+
                         $('.gt-buttonEven ').on('click',function(el){
                         $(this).parent().find('.gt-buttonEven').removeClass('gt-buttonClik');
                         $(this).addClass('gt-buttonClik') 
                     })
-                    $('.gt-nav').on('click',function(){
-                        $(this).siblings().removeClass('gt-navBlock');
-                        $(this).addClass('gt-navBlock');
-                        $('iframe').hide();
-                    })
+                    // $('.gt-nav').on('click',function(){
+                    //     $(this).siblings().removeClass('gt-navBlock');
+                    //     $(this).addClass('gt-navBlock');
+                    //     $('iframe').hide();
+                    // })
 
                 
 
@@ -100,8 +138,15 @@ console.log('home loaded!');
         eventBind_report: function(){
                         
                 $('.gt-NavReporting').on('click',function(el){
+                      
+                    $('.gt-nav').removeClass('gt-navBlock');
+                    $('#gt-NavReportingSm').addClass('gt-navBlock');
+                    $('.gt-buttonEven').removeClass('gt-buttonClik ');
+                    $('#gt-NavReporting').addClass('gt-buttonClik ');
+                    $('iframe').hide();
+
                     $('.gt-centCom').hide();
-                $('.gt-reporting').show();
+                   $('.gt-reporting').show();
                     
             })
             

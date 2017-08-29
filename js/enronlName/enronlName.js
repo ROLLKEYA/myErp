@@ -32,7 +32,7 @@ console.log(54255);
          }, false );
          
      
-         $('.gt-stepDb').on('click',function(){
+         $('#gt-imagChoose').on('click',function(){
           console.log(4545);
           materiallayer();
          })

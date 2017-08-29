@@ -7,6 +7,18 @@
                 width: 90%;
                 margin: 0 auto;
             }
+
+            div::-webkit-scrollbar { width:10px; height:10px;}           
+            div::-webkit-scrollbar-button {width: 10px;  height: 8px;border-radius: 4px; background-color: #c5c1c1;display: none;}     
+            div::-webkit-scrollbar-track {  background:#747272;}     
+            div::-webkit-scrollbar-track-piece  {  background:#f7f7f9;}
+            div::-webkit-scrollbar-thumb {background: #b3b3b7;;border-radius:4px;}      
+
+            ul::-webkit-scrollbar { width:10px; height:10px;}           
+            ul::-webkit-scrollbar-button {width: 10px;  height: 8px;border-radius: 4px; background-color: #c5c1c1;display: none;}     
+            ul::-webkit-scrollbar-track {  background:#747272;}     
+            ul::-webkit-scrollbar-track-piece  {  background:#f7f7f9;}
+            ul::-webkit-scrollbar-thumb {background: #b3b3b7;;border-radius:4px;}     
         table { 
         border-collapse:collapse; 
         border-spacing:0; 
@@ -275,10 +287,12 @@
             text-align: center;
             margin-left: 50px;
         border: 1px solid #e4e4e4;
+        height: 85px;
+        overflow-y: auto;
         }
         .gt-enrotabl{
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
             margin: 0 auto;
             text-align: center;
             border: none; 
@@ -306,6 +320,11 @@
 
         .gt-Edatli0{
         width: 90px;
+        table-layout:fixed;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         }
         
         .gt-Edatli1{
@@ -632,6 +651,19 @@
         text-align: center;
         display: none;
         }
+        .gt-loser{
+            top:40%;
+            left: 300px;
+        width: 570px;
+        height: 360px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 1);
+        box-sizing: border-box;
+        border: 1px solid rgba(238, 238, 238, 1); 
+        z-index: 89;
+        text-align: center;
+        display: none;
+        }
         .gt-brief{
             width: 100%;
             height: 42px;
@@ -718,7 +750,7 @@
             left: -1px;
             top: 0px;
             width: 1282px;
-            height:100%;
+            height:101%;
             background-image: url('../image/ico/u2518.png');
            background-size: 100% 100%;
           
@@ -726,6 +758,9 @@
             -moz-opacity:0.3; /*Firefox私有，透明度50%*/
             opacity:0.3;/*其他，透明度50%*/
             z-index:88;
+        }
+        .gt-redWord{
+           margin-top: 20px;
         }
       
   @media screen and (min-width: 1280px){

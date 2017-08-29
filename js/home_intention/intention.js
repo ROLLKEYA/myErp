@@ -26,6 +26,14 @@ console.log('招生管理');
          frist_intni:function(){
                    var self=this;
                     $('.gt-NavSupply').on('click',function(){
+                    
+                        $('.gt-nav').removeClass('gt-navBlock');
+                        $('#gt-NavSupplySm').addClass('gt-navBlock');
+                        $('.gt-buttonEven').removeClass('gt-buttonClik ');
+                        $('#gt-NavSupply').addClass('gt-buttonClik ');
+                        $('iframe').hide();
+
+
                         $('.gt-centCom').hide();
                         $('.gt-supply').show();
                           self.NhasStudy=0;

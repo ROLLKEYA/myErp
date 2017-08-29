@@ -89,7 +89,7 @@ function binddata(dataNb){
                                              if(res.code===100){
                                                  self.activeRend(res.data);
                                              
-         
+                                                self.titel();
                                              }
                                         },
                                         error: function(){
@@ -194,7 +194,8 @@ function binddata(dataNb){
                                              if(res.code===100){
                                                
                                                 self.activeRend(res.data);
-                                               
+                                                self.titel();
+                                                self.NuberInit();
                                              }
                                         },
                                         error: function(){
@@ -206,7 +207,7 @@ function binddata(dataNb){
                             
                   
                  })
-                          //   搜索 模糊 搜索
+                    //   搜索 模糊 搜索
             $('#gt-searc').on('click',function(){
                 
                 var enrollName=$('#gt-searcIput').val();
@@ -224,6 +225,8 @@ function binddata(dataNb){
                                              if(res.code===100){
                                                
                                                 self.activeRend(res.data);
+                                                self.titel();
+                                                self.NuberInit();
                                              }
                                         },
                                         error: function(){
@@ -235,14 +238,14 @@ function binddata(dataNb){
             })
                                         //  首页
                   $('#gt-hPag').on('click',function(){
-                                  
+                    var enrollName=$('#gt-searcIput').val();
                                   
                                       $.ajax({
                                           url:url+'/findEnrollList.do',
                                         data:{
                                        
                                         curPage:1 ,
-                                       
+                                        enrollName:enrollName,
                                         },
                                         type:'post',
                                         dataType:'json',
@@ -250,7 +253,7 @@ function binddata(dataNb){
                                           
                                           console.log(res.data)
                                              if(res.code===100){
-                                                  
+                                                self.titel();
                                                  self.activeRend(res.data);
                                              }
                                         },
@@ -265,13 +268,15 @@ function binddata(dataNb){
                     //  xia一页
                   $('#nextPg').on('click',function(){
                                  
-                                                  console.log( self.currentPg)
+                                 console.log( self.currentPg);
+                                var enrollName=$('#gt-searcIput').val();
+                                                  
                                       $.ajax({
                                        url:url+'/findEnrollList.do',
                                         data:{
                                   
                                         curPage: self.currentPg+1 ,
-                                       
+                                        enrollName:enrollName,
                                         },
                                         type:'post',
                                         dataType:'json',
@@ -280,6 +285,7 @@ function binddata(dataNb){
                                              if(res.code===100){
                                                 
                                             self.activeRend(res.data);
+                                            self.titel();
                                              }
                                         },
                                         error: function(){

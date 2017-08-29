@@ -169,7 +169,7 @@
 
         .gt-navActioan{
         width: 140px;
-        height: 1282px;
+        height: 1360px;
         position: absolute;
         top:0;
         left: -140px;
@@ -320,6 +320,7 @@
             right: -120px;
             top:0px;
         display: none;
+        cursor: pointer;
             }
             .gt-editBt{
                 width: 98px;
@@ -360,6 +361,7 @@
 
             .gt-icoSel{
                 margin-top: 15px;
+                cursor: pointer;
                 
             }
             .gt-icoSel img{
@@ -6073,6 +6075,22 @@ font-family: 'Microsoft YaHei UI Light', 'Microsoft YaHei UI Regular', 'Microsof
     .gt-Qlookf{
         margin-left: 390px;
     }
+    .gt-feidiao{
+        width: 370px;
+        height: 267px;
+        
+    }
+    .gt-liailo{
+        height: 80px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .gt-liailo img{
+        width: 70px;
+        height: 70px;
+    }
+
          @media screen and (min-width: 1280px) {
               header{
             width:100%;

@@ -50,6 +50,14 @@ console.log('招生管理');
         var self=this;
 
 $('.gt-NavTeaching').on('click',function(el){
+
+          
+    $('.gt-nav').removeClass('gt-navBlock');
+    $('#gt-NavTeachingSm').addClass('gt-navBlock');
+    $('.gt-buttonEven').removeClass('gt-buttonClik ');
+    $('#gt-NavTeaching').addClass('gt-buttonClik ');
+    $('iframe').hide();
+
         $('.gt-centCom').hide();
          $('.gt-teaching ').show(); 
          $('#gt-Myte1').addClass('gt-clikClor');

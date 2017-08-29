@@ -505,6 +505,7 @@ position: relative;
     box-sizing: border-box;
     border: 1px solid rgba(1, 185, 254, 1);
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .gt-imageSugg{
@@ -533,7 +534,7 @@ font-size: 13px;
 }
 
 .gt-Parents{
-   margin-left: 35px;
+   margin-left: 99px;
    padding-top: 30px;
     font-size: 13px;
     color: #333333;
@@ -580,7 +581,7 @@ font-size: 13px;
 }
 
 .gt-addParents{
-    margin-left:35px;
+    margin-left:137px;
     margin-top: 30px;
 }
 .gt-nextBut{

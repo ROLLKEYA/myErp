@@ -1501,7 +1501,7 @@ height: 18px;
 }
 .gt-tableLf{
     float:left;
-    width: 630px;
+    width: 608px;
   white-space:nowrap;
   text-overflow:ellipsis; /* for internet explorer */
    overflow:hidden;
@@ -1515,7 +1515,7 @@ height: 18px;
 .gt-tableRt{
     margin-right: 40px;
     float: right;
-    width: 198px;
+    width: 209px;
     height: 99%;
     background-color: rgba(255, 255, 255, 1);
     border-width: 1px;
@@ -1548,6 +1548,7 @@ height: 18px;
     font-style: normal;
     font-size: 12px;
     text-align: center;
+    table-layout:fixed;
 }
 
 .gt-steLitabl td{
@@ -1571,7 +1572,12 @@ position: relative;
 
 .gt-steLi2{
 
+ width: 112px;
 
+text-overflow: ellipsis;
+ -o-text-overflow: ellipsis;
+ white-space: nowrap;
+ overflow: hidden;
 }
  gt-steLi3{
 width: 80px;
@@ -1658,7 +1664,7 @@ border-right: none;
     height: 24px;
  }
  .gt-lihBox{
-       width: 198px;
+       width: 93%;
     height: 40px;
     background: inherit;
    display: inline-block;

@@ -45,14 +45,19 @@ console.log('前台业务JS!');
 
                              
                     $('.gt-NavStage').on('click',function(el){
+                       $('.gt-nav').removeClass('gt-navBlock');
+                       $('#gt-NavStageSm').addClass('gt-navBlock');
+                       $('.gt-buttonEven').removeClass('gt-buttonClik ');
+                       $('#gt-NavStage').addClass('gt-buttonClik ');
+                       $('iframe').hide();
                      $('.gt-centCom').hide();
                      $('.gt-deails').show();
                      $('#gt-Caddclass').hide();
                      $('iframe').hide();
                      $('.gt-enroll').hide();
-                    $('#gt-lista').addClass('gt-hoverClor');
-                    $('#gt-lista').siblings().removeClass('gt-hoverClor');
-                    $('.gt-provided').show();
+                     $('#gt-lista').addClass('gt-hoverClor');
+                      $('#gt-lista').siblings().removeClass('gt-hoverClor');
+                     $('.gt-provided').show();
                         self.bettering();
         
                         })
@@ -403,6 +408,9 @@ console.log('前台业务JS!');
           //报名列表
         SignUpList:function () { 
                 var self=this;
+
+
+
                  
                // 报名列表
                             $('#gt-listb').click(function(){
